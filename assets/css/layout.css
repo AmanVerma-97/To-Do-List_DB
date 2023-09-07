@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(89, 244, 244, 0.501),rgba(4, 248, 248, 0.501));
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100vh;
+   
+}
+
+header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+footer{
+    background-color: rgba(22, 21, 21, 0.901);
+    color: maroon;
+    font-weight: bolder;
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}

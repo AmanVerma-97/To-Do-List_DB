@@ -13,4 +13,8 @@ console.log("Router loaded");
 
 router.get('/',homeController.home);
 
+router.get('/signin', homeController.signin);
+
+router.get('/signup', homeController.signup);
+
 module.exports=router;

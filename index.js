@@ -9,6 +9,8 @@ app.use(expressLayouts);
 //This tells app to search for a wrapper layout around different views/routes.
 
 
+//path for static content
+app.use(express.static('./assets'));
 //extract style and script from sub-pages into 'layout' page.
 //using this individual pages can be styles independently.
 app.set('layout extractStyles',true);

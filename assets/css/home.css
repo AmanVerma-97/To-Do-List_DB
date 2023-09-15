@@ -1,0 +1,24 @@
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(55, 85, 111, 0.958);
+    width: 50%;
+    min-height: 200px;
+    box-shadow: 12px 0px 20px 0px black;
+}
+
+h1{
+    color: white;
+}
+button{
+    margin-top: 10px;
+    width: 25%;
+    border-radius: 5px;
+    border: 2px solid rgb(214, 126, 126);
+    color: black;
+    background-color: blanchedalmond;
+    cursor: pointer;
+}

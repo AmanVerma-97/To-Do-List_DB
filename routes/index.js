@@ -17,4 +17,14 @@ router.get('/signin', homeController.signin);
 
 router.get('/signup', homeController.signup);
 
+router.get('/addtask', homeController.addTask);
+
+router.post('/adduser',homeController.addUser);
+
+router.post('/checkuser', homeController.checkUser);
+
+router.post('/addtaskDB', homeController.addTasktoDB);
+
+router.post('/deleteuser', homeController.deleteUser);
+
 module.exports=router;

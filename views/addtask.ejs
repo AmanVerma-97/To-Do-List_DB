@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/addtask.css">
+<form action="/addtaskDB" method="post">
+    <h1>Welcome <%=user.name %> - add your tasks</h1>
+    <input type="name" name="task" placeholder="Enter task name" required>
+    <input type="date" value="2023-09-15" name="date" required>
+    <input type="text" name="description" placeholder="Enter description" maxlength="20" required>
+    <input type="text" name="name" value="<%=user.name %>" readonly>
+    <input type="submit" name="submit" value="Add Task">
+</form>
+<span>Total tasks:<span id="tasks-counter">0</span></span>
+<div>
+    <ul id="list">
+        <!-- <li>
+          <input type="checkbox" id="task1" data-id="12" class="custom-checkbox">
+          <label for="task1">Buy groceries</label>
+          <img src="bin.png" class="delete" data-id="12" />
+        </li> -->
+      </ul>
+</div>
+<form id="logout" action="/deleteuser" method="post">
+  <input type="submit" value="Logout">
+</form>
+<script src="/js/todo.js"></script>

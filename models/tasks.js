@@ -5,7 +5,8 @@ const TaskInfo= new mongoose.Schema({
     task:{
         type:String,
         required:true,
-        unique:true
+        unique:true,
+        lowercase:true
     },
 
     date:{
@@ -15,7 +16,8 @@ const TaskInfo= new mongoose.Schema({
 
     description:{
         type:String,
-        required:true
+        required:true,
+        lowercase:true
     },
 
     name:{
@@ -25,6 +27,7 @@ const TaskInfo= new mongoose.Schema({
 },{
     timestamps:true  //This will automatically save timestamps about when was user 'created' and when was he 'updated'.
 });
+
 
 const taskInfo= mongoose.model('User_Task_Info', TaskInfo);
 

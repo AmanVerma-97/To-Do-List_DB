@@ -27,4 +27,6 @@ router.post('/addtaskDB', homeController.addTasktoDB);
 
 router.post('/deleteuser', homeController.deleteUser);
 
+router.post('/delete', homeController.deleteTask);
+
 module.exports=router;

@@ -1,23 +1,36 @@
 <link rel="stylesheet" href="/css/addtask.css">
-<form action="/addtaskDB" method="post">
+<form action="/addtaskDB" method="post" class="form">
     <h1>Welcome <%=user.name %> - add your tasks</h1>
     <input type="name" name="task" placeholder="Enter task name" required>
-    <input type="date" value="2023-09-15" name="date" required>
+    <input type="date" value="2023-09-15 DUE DATE" name="date" required>
     <input type="text" name="description" placeholder="Enter description" maxlength="20" required>
-    <input type="text" name="name" value="<%=user.name %>" readonly>
+    <input type="text" name="name" value="<%= user.name %>" readonly id="default-name">
     <input type="submit" name="submit" value="Add Task">
 </form>
-<span>Total tasks:<span id="tasks-counter">0</span></span>
-<div>
+<span>Total tasks:<span id="tasks-counter"><%= tasks.length %></span></span>
+<div id="container">
     <ul id="list">
-        <!-- <li>
-          <input type="checkbox" id="task1" data-id="12" class="custom-checkbox">
-          <label for="task1">Buy groceries</label>
-          <img src="bin.png" class="delete" data-id="12" />
-        </li> -->
-      </ul>
+
+        <% for(let task of tasks){ %>
+          <li class="tasks"> 
+            <%
+            const taskWords = task.task.split(' ');
+            const firstTaskWord = taskWords[0];
+            %>
+            <input type="checkbox" id= '<%= task._id %>'>
+            <label for='<%= task._id %>'> <b><%= firstTaskWord %></b></label>
+            <label for='<%= task._id %>'> <span>-</span> <%= task.description %> &nbsp <%= task.date%> </label>
+            <form action="/delete" method="post">
+              <input type="text" name="taskToBeDeleted" value='<%= task._id %>' readonly>
+              <button type="submit"><img src="/images/bin.png" class="delete" data-id='<%= task._id %>' /></button>
+            </form> 
+          </li>
+      <% } %>
+
+    </ul>
 </div>
 <form id="logout" action="/deleteuser" method="post">
   <input type="submit" value="Logout">
 </form>
+
 <script src="/js/todo.js"></script>

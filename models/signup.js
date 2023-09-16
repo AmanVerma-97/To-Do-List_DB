@@ -20,7 +20,7 @@ const SignupInfo= new mongoose.Schema({
 
 },{
     timestamps:true  //This will automatically save timestamps about when was user 'created' and when was he 'updated'.
-});
+}); 
 
 const userSignUp= mongoose.model('UserSignUp', SignupInfo);
 

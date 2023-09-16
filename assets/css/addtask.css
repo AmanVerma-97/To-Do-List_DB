@@ -11,7 +11,7 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-form{
+.form{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -39,6 +39,10 @@ input{
     background-color: blanchedalmond;
     cursor: pointer;
     text-align: center;
+}
+
+#default-name{
+    display: none;
 }
 
 input[type="submit"]{
@@ -78,4 +82,65 @@ input[type="submit"]:hover{
     color: rgb(11, 11, 14);
     font-weight: bolder;
     padding: 5px;
+}
+
+/* TASKS */
+
+#container{
+    width: 50%;
+    /* border: 2px solid honeydew; */
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+ul{
+    width: 90%;
+    list-style-type: none;
+}
+
+.tasks{
+    background-color: rgba(104, 210, 177, 0.622);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    box-shadow: 1px 5px 6px 2px gray;
+}
+
+.tasks:hover{
+    background-color: aquamarine;
+}
+
+li>form{
+    cursor: pointer;
+    flex: 1;
+}
+
+li>form>input{
+    display:none;
+}
+
+li>form>button{
+    background: transparent;
+    border: none;
+    float: right;
+    margin-left: auto;
+}
+
+li>form>button>img{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+#list input:checked + label{
+    text-decoration: line-through;
+}
+
+.tasks input[type="checkbox"]:checked{
+    background-color: aqua;
 }

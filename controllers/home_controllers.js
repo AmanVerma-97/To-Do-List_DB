@@ -176,7 +176,7 @@ module.exports.addTasktoDB= async function(req,res){
     }
 }
 
-//logour user and delete cookie
+//logout user and delete cookie
 module.exports.deleteUser=function(req,res){
     console.log("Reached here to logout user");
     
@@ -186,6 +186,7 @@ module.exports.deleteUser=function(req,res){
 }
 
 
+//delete task
 module.exports.deleteTask= async function(req,res){
     console.log("Reached here to delete task");
     console.log(req.body);

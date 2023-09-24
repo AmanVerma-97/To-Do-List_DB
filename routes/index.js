@@ -11,22 +11,22 @@ const homeController=require('../controllers/home_controllers');
 
 console.log("Router loaded");
 
-router.get('/',homeController.home);
+router.get('/',homeController.home); //homepage
 
-router.get('/signin', homeController.signin);
+router.get('/signin', homeController.signin); //sign-in page
 
-router.get('/signup', homeController.signup);
+router.get('/signup', homeController.signup); //sign-up page
 
-router.get('/addtask', homeController.addTask);
+router.get('/addtask', homeController.addTask); //add-task page
 
-router.post('/adduser',homeController.addUser);
+router.post('/adduser',homeController.addUser); //confirm signup
 
-router.post('/checkuser', homeController.checkUser);
+router.post('/checkuser', homeController.checkUser); //confirm login
 
-router.post('/addtaskDB', homeController.addTasktoDB);
+router.post('/addtaskDB', homeController.addTasktoDB); //add task to database
 
-router.post('/deleteuser', homeController.deleteUser);
+router.post('/deleteuser', homeController.deleteUser); //logout
 
-router.post('/delete', homeController.deleteTask);
+router.post('/delete', homeController.deleteTask); //delete task
 
 module.exports=router;
